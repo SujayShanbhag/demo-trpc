@@ -6,6 +6,18 @@ export const objectRouter= router({
         return {
             result: 'it exists',
         }
+    }),
+    create: procedure
+    .input(
+        z.object({
+          objectName: z.string(),
+          quantity: z.number(),
+        }),
+      )
+    .mutation((opts) => {
+        return {
+            result :`Created ${opts.input.quantity} number of ${opts.input.objectName} objects`,
+        }
     })
 })
 

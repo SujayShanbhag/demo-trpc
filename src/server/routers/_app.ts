@@ -17,6 +17,7 @@ export const appRouter = router({
       };
     }),
     person : personRouter,
+    object: objectRouter,
 });
 
 
